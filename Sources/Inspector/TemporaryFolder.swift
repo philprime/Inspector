@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TemproraryFolder: Folder {
+public class TemproraryFolder: Folder {
 
     init() throws {
         let fm = FileManager.default

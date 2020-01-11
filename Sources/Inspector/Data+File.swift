@@ -10,7 +10,7 @@ import Foundation
 
 extension Data {
 
-    func write(to file: File) throws {
+    public func write(to file: File) throws {
         try write(to: file.url)
     }
 }

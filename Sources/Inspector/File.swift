@@ -8,7 +8,7 @@
 
 import Foundation
 
-class File {
+public class File {
 
     public let url: URL
 
@@ -32,14 +32,14 @@ class File {
         return FileManager.default.fileExists(atPath: url.path)
     }
 
-    var size: Int64 {
+    var size: FileSize {
         guard let fileSizeResourceValue = try? url.resourceValues(forKeys: [.isDirectoryKey, .fileSizeKey]) else {
-            return 0
+            return .empty
         }
         if fileSizeResourceValue.isDirectory == true {
-            return 0
+            return .empty
         }
-        return Int64(fileSizeResourceValue.fileSize ?? 0)
+        return FileSize(bytes: Int64(fileSizeResourceValue.fileSize ?? 0))
     }
 
     @discardableResult
