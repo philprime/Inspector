@@ -11,6 +11,9 @@ import Foundation
 extension Data {
 
     public func write(to file: File) throws {
+        if !file.exists {
+            try file.touch()
+        }
         try write(to: file.url)
     }
 }

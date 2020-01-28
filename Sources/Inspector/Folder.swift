@@ -8,20 +8,14 @@
 
 import Foundation
 
-public class Folder {
-
-    public let url: URL
-
-    public convenience init(path: String) {
-        self.init(url: URL(fileURLWithPath: path))
-    }
+public class Folder: FSItem {
 
     public convenience init(name: String, in folder: Folder) {
         self.init(url: folder.url.appendingPathComponent(name))
     }
 
-    public init(url: URL) {
-        self.url = url
+    public override init(url: URL) {
+        super.init(url: url)
     }
 
     public var exists: Bool {
@@ -31,13 +25,10 @@ public class Folder {
 
     public var files: [File] {
         do {
-            let contents = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: [.fileSizeKey, .isDirectoryKey])
-            return contents.compactMap({ url in
-                guard (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == false else {
-                    return nil
-                }
-                return File(url: url)
-            })
+            return try getContentURLs(of: url)
+                .compactMap({ (url, isDirectory) in
+                    isDirectory ? nil : File(url: url)
+                })
         } catch {
             return []
         }
@@ -45,16 +36,38 @@ public class Folder {
 
     public var subfolders: [Folder] {
         do {
-            let contents = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: [.fileSizeKey, .isDirectoryKey])
-            return contents.compactMap({ url in
-                guard (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true else {
-                    return nil
-                }
-                return Folder(url: url)
-            })
+            return try getContentURLs(of: url)
+                .compactMap({ (url, isDirectory) in
+                    isDirectory ? Folder(url: url) : nil
+                })
         } catch {
             return []
         }
+    }
+
+    public var content: [FSItem] {
+        do {
+            return try getContentURLs(of: url)
+                .map({ (url, isDirectory) in
+                    isDirectory ? Folder(url: url) : File(url: url)
+                })
+        } catch {
+            return []
+        }
+    }
+
+    private func getContentURLs(of url: URL) throws -> [(url: URL, isDirectory: Bool)] {
+        var resolvedURL = url
+        resolvedURL.resolveSymlinksInPath()
+
+        return try FileManager
+            .default
+            .contentsOfDirectory(at: resolvedURL, includingPropertiesForKeys: [.fileSizeKey, .isDirectoryKey])
+            .map({ (url: $0, isDirectory: isDirectory(url: $0)) })
+    }
+
+    private func isDirectory(url: URL) -> Bool {
+        (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true
     }
 
     public var size: FileSize {
@@ -62,6 +75,27 @@ public class Folder {
     }
 
     public func create() throws {
-        try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+        try FileManager.default.createDirectory(at: self.url, withIntermediateDirectories: true, attributes: nil)
+    }
+
+    public func remove() throws {
+        try FileManager.default.removeItem(at: self.url)
+    }
+
+    public func clear() throws {
+        guard exists else {
+            return
+        }
+        for item in try getContentURLs(of: self.url) {
+            try FileManager.default.removeItem(at: item.url)
+        }
+    }
+
+    public subscript(subfolder path: String) -> Folder {
+        Folder(url: self.url.appendingPathComponent(path))
+    }
+
+    public subscript(file path: String) -> File {
+        File(url: self.url.appendingPathComponent(path))
     }
 }
