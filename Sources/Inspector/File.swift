@@ -15,7 +15,7 @@ public class File: FSItem {
         if let ext = ext {
             path.appendPathExtension(ext)
         }
-        self.init(url: path)
+        self.init(url: path.resolvingSymlinksInPath())
     }
 
     public override init(url: URL) {
