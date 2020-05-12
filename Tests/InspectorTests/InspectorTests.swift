@@ -20,16 +20,16 @@ final class InspectorTests: XCTestCase {
             let file5 = File(name: "file5.txt", in: subfolder2)
             let file6 = File(name: "file6.txt", in: subfolder2)
 
-            XCTAssertTrue(file1.touch())
-            XCTAssertTrue(file2.touch())
+            XCTAssertTrue(try file1.touch())
+            XCTAssertTrue(try file2.touch())
 
             try subfolder1.create()
-            XCTAssertTrue(file3.touch())
-            XCTAssertTrue(file4.touch())
+            XCTAssertTrue(try file3.touch())
+            XCTAssertTrue(try file4.touch())
 
             try subfolder2.create()
-            XCTAssertTrue(file5.touch())
-            XCTAssertTrue(file6.touch())
+            XCTAssertTrue(try file5.touch())
+            XCTAssertTrue(try file6.touch())
 
             guard let testData = "ABCDEF".data(using: .utf8) else {
                 XCTFail()
