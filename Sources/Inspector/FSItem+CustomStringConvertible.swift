@@ -6,8 +6,6 @@
 //  Copyright © 2020 Philip Niedertscheider. All rights reserved.
 //
 
-import Foundation
-
 extension FSItem: CustomStringConvertible {
 
     public var description: String {
