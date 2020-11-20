@@ -4,5 +4,8 @@
 /*.xcodeproj
 xcuserdata/
 
-# Swift PM
+# Gems
+vendor
+
+# Swift Package Manager
 .swiftpm
