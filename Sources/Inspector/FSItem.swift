@@ -30,15 +30,15 @@ public class FSItem {
         let baseComponents = base.url.standardized.resolvingSymlinksInPath().pathComponents
 
         // Find number of common path components:
-        var i = 0
-        while i < min(destComponents.count, baseComponents.count)
-            && destComponents[i] == baseComponents[i] {
-                i += 1
+        var count = 0
+        while count < min(destComponents.count, baseComponents.count)
+            && destComponents[count] == baseComponents[count] {
+                count += 1
         }
 
         // Build relative path:
-        var relComponents = Array(repeating: "..", count: baseComponents.count - i)
-        relComponents.append(contentsOf: destComponents[i...])
+        var relComponents = Array(repeating: "..", count: baseComponents.count - count)
+        relComponents.append(contentsOf: destComponents[count...])
         return relComponents.joined(separator: "/")
     }
 }

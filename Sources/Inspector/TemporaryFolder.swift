@@ -11,9 +11,9 @@ import Foundation
 public class TemproraryFolder: Folder {
 
     init() throws {
-        let fm = FileManager.default
+        let manager = FileManager.default
         let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(UUID().uuidString)
-        try fm.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+        try manager.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
         super.init(url: url)
     }
 }

@@ -42,12 +42,12 @@ public class File: FSItem {
 
     @discardableResult
     public func touch() throws -> Bool {
-        let fm = FileManager.default
+        let manager = FileManager.default
         // Create directories
-        try fm.createDirectory(at: url.deletingLastPathComponent(),
+        try manager.createDirectory(at: url.deletingLastPathComponent(),
                            withIntermediateDirectories: true,
                            attributes: nil)
-        return fm.createFile(atPath: url.path, contents: nil, attributes: nil)
+        return manager.createFile(atPath: url.path, contents: nil, attributes: nil)
     }
 
     public func delete() throws {
