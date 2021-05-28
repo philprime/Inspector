@@ -98,4 +98,8 @@ public class Folder: FSItem {
     public subscript(file path: String) -> File {
         File(url: self.url.appendingPathComponent(path))
     }
+
+    public var parent: Folder {
+        Folder(url: self.url.deletingLastPathComponent())
+    }
 }
