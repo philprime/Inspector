@@ -24,6 +24,14 @@ public class FSItem {
         url.path
     }
 
+    public var name: String {
+        url.lastPathComponent
+    }
+
+    public var `extension`: String {
+        url.pathExtension
+    }
+
     public func path(relativeTo base: FSItem) -> String {
         // Remove/replace "." and "..", make paths absolute:
         let destComponents = url.standardized.resolvingSymlinksInPath().pathComponents
