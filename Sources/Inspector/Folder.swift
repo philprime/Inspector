@@ -23,6 +23,7 @@ public class Folder: FSItem {
         return FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory) && isDirectory.boolValue
     }
 
+    /// List of files located inside this folder
     public var files: [File] {
         do {
             return try getContentURLs(of: url)
@@ -34,6 +35,7 @@ public class Folder: FSItem {
         }
     }
 
+    /// List of folders located inside this folder
     public var subfolders: [Folder] {
         do {
             return try getContentURLs(of: url)
@@ -45,6 +47,7 @@ public class Folder: FSItem {
         }
     }
 
+    /// Array of all files and folders located inside this folder
     public var content: [FSItem] {
         do {
             return try getContentURLs(of: url)
@@ -101,5 +104,10 @@ public class Folder: FSItem {
 
     public var parent: Folder {
         Folder(url: self.url.deletingLastPathComponent())
+    }
+
+    /// Returns `true` if no folders and no files are located inside this folder
+    public var isEmpty: Bool {
+        content.isEmpty
     }
 }

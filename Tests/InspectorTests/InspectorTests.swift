@@ -5,7 +5,7 @@ final class InspectorTests: XCTestCase {
 
     func testExample() {
         do {
-            let tempFolder = try TemproraryFolder()
+            let tempFolder = try TemporaryFolder()
             print(tempFolder.url)
             let file1 = File(name: "file1.txt", in: tempFolder)
             let file2 = File(name: "file2.txt", in: tempFolder)
@@ -54,6 +54,25 @@ final class InspectorTests: XCTestCase {
         } catch {
             XCTFail(error.localizedDescription)
         }
+    }
+
+    func testTempFileGenerator_shouldGenerateUniqueFile() throws {
+        var file: File?
+        XCTAssertNoThrow(try {
+            file = try Inspector.createTemporaryFile()
+        }())
+        XCTAssertNotNil(file)
+        XCTAssertTrue(file?.exists == true)
+    }
+
+    func testTempFileGenerator_shouldGenerateUniqueFolder() throws {
+        var folder: Folder?
+        XCTAssertNoThrow(try {
+            folder = try Inspector.createTemporaryFolder(   )
+        }())
+        XCTAssertNotNil(folder)
+        XCTAssertTrue(folder?.exists == true)
+        XCTAssertTrue(folder?.isEmpty == true)
     }
 
     static var allTests = [
