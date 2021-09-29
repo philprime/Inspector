@@ -110,4 +110,16 @@ public class Folder: FSItem {
     public var isEmpty: Bool {
         content.isEmpty
     }
+
+    public func recursiveCopy(to target: Folder) throws {
+        if !target.exists {
+            try target.create()
+        }
+        for file in files {
+            try file.copy(to: File(name: file.name, extension: file.extension, in: target))
+        }
+        for folder in subfolders {
+            try folder.recursiveCopy(to: target[subfolder: self.name])
+        }
+    }
 }
