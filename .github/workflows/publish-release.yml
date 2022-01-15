@@ -1,0 +1,23 @@
+name: Publish Release
+
+on:
+  push:
+    tags:        
+      - '*'
+
+jobs:
+  create_release:
+    name: Create Release
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create XCFramework
+        uses: philprime/swift-create-xcframework@main
+      - name: Create GitHub Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            Inspector.sha256
+            Inspector.zip
