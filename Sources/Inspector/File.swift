@@ -22,6 +22,11 @@ public class File: FSItem {
         super.init(url: url)
     }
 
+    /// Name of this file without the path extension
+    public var fileName: String {
+        url.deletingPathExtension().lastPathComponent
+    }
+
     public var folder: Folder {
         Folder(url: self.url.deletingLastPathComponent())
     }
