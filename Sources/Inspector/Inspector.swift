@@ -3,7 +3,7 @@
 //  Inspector
 //
 //  Created by Philip Niedertscheider on 29.06.20.
-//  Copyright © 2020 Philip Niedertscheider. All rights reserved.
+//  Copyright (c) 2023 Philip Niedertscheider. All rights reserved.
 //
 
 import Darwin
