@@ -1,0 +1,376 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Data+File.swift",
+      "line": 13,
+      "symbol": "Data.write(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 9,
+      "symbol": "FSItem",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 11,
+      "symbol": "FSItem",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 13,
+      "symbol": "FSItem.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 15,
+      "symbol": "FSItem.init(path:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 19,
+      "symbol": "FSItem.init(url:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 23,
+      "symbol": "FSItem.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 27,
+      "symbol": "FSItem.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 31,
+      "symbol": "FSItem.extension",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FSItem.swift",
+      "line": 35,
+      "symbol": "FSItem.path(relativeTo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 11,
+      "symbol": "File",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 13,
+      "symbol": "File.init(name:extension:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 21,
+      "symbol": "File.init(url:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 30,
+      "symbol": "File.folder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 34,
+      "symbol": "File.exists",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 38,
+      "symbol": "File.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 49,
+      "symbol": "File.touch()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 58,
+      "symbol": "File.delete()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 62,
+      "symbol": "File.copy(to:overwrite:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 72,
+      "symbol": "File.read()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/File.swift",
+      "line": 76,
+      "symbol": "File.move(to:overwrite:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileOperation.swift",
+      "line": 14,
+      "symbol": "FileOperation.write(data:to:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileOperation.swift",
+      "line": 16,
+      "symbol": "FileOperation.copyFile(from:to:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileOperation.swift",
+      "line": 17,
+      "symbol": "FileOperation.copyFolder(from:to:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileOperation.swift",
+      "line": 19,
+      "symbol": "FileOperation.moveFile(from:to:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileOperation.swift",
+      "line": 20,
+      "symbol": "FileOperation.moveFolder(from:to:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileSize+Math.swift",
+      "line": 11,
+      "symbol": "FileSize.+(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileSize+Math.swift",
+      "line": 15,
+      "symbol": "FileSize.-(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileSize.swift",
+      "line": 9,
+      "symbol": "FileSize",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileSize.swift",
+      "line": 9,
+      "symbol": "FileSize",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileSize.swift",
+      "line": 9,
+      "symbol": "FileSize",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/FileSize.swift",
+      "line": 11,
+      "symbol": "FileSize.bytes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 9,
+      "symbol": "Folder",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 11,
+      "symbol": "Folder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 13,
+      "symbol": "Folder.init(name:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 17,
+      "symbol": "Folder.init(url:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 21,
+      "symbol": "Folder.exists",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 76,
+      "symbol": "Folder.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 80,
+      "symbol": "Folder.create()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 84,
+      "symbol": "Folder.remove()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 88,
+      "symbol": "Folder.clear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 97,
+      "symbol": "Folder.subscript(subfolder:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 101,
+      "symbol": "Folder.subscript(file:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 105,
+      "symbol": "Folder.parent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 114,
+      "symbol": "Folder.recursiveCopy(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Folder.swift",
+      "line": 126,
+      "symbol": "Folder.move(to:overwrite:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Inspector.swift",
+      "line": 11,
+      "symbol": "Inspector",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/Inspector.swift",
+      "line": 13,
+      "symbol": "Inspector.currentWorkingDirectory",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/InspectorError.swift",
+      "line": 3,
+      "symbol": "InspectorError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/InspectorError.swift",
+      "line": 5,
+      "symbol": "InspectorError.invalidTempFileTemplate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/InspectorError.swift",
+      "line": 6,
+      "symbol": "InspectorError.failedToCreateFile(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/InspectorError.swift",
+      "line": 7,
+      "symbol": "InspectorError.targetAlreadyExists",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Inspector/Inspector/Sources/Inspector/TemporaryFolder.swift",
+      "line": 11,
+      "symbol": "TemporaryFolder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/Inspector/Inspector"
+}
