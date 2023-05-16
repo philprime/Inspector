@@ -122,4 +122,11 @@ public class Folder: FSItem {
             try folder.recursiveCopy(to: target[subfolder: self.name])
         }
     }
+
+    public func move(to destination: Folder, overwrite: Bool = false) throws {
+        if destination.exists && !overwrite {
+            throw InspectorError.targetAlreadyExists
+        }
+        try FileManager.default.moveItem(at: self.url, to: destination.url)
+    }
 }

@@ -72,4 +72,14 @@ public class File: FSItem {
     public func read() throws -> Data {
         return try Data(contentsOf: url)
     }
+
+    public func move(to destination: File, overwrite: Bool = false) throws {
+        if !destination.folder.exists {
+            try destination.folder.create()
+        }
+        if destination.exists && !overwrite {
+            throw InspectorError.targetAlreadyExists
+        }
+        try FileManager.default.moveItem(at: self.url, to: destination.url)
+    }
 }

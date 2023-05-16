@@ -16,4 +16,6 @@ public enum FileOperation {
     case copyFile(from: File, to: File)
     case copyFolder(from: Folder, to: Folder)
 
+    case moveFile(from: File, to: File)
+    case moveFolder(from: Folder, to: Folder)
 }
