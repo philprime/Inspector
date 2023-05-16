@@ -2,8 +2,8 @@ name: Publish Release
 
 on:
   push:
-    tags:        
-      - '*'
+    tags:
+      - "*"
 
 jobs:
   create_release:
